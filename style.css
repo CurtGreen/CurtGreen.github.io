@@ -79,24 +79,22 @@ p {
     grid-row: 3;
 }
 
-.card-details > button {
-    margin-top: 40px;
-    width: 60%;
-    height: 40px;
+.button {
+    margin: 60px 0px 0px 160px;
+    display:block;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
     background-color: cadetblue;
     color: white;
+    font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size:large;
     border-radius: 10px;
     border-style:none;
-}
-
-.card-details > button > a {
-    color: white;
     text-decoration: none;
 }
 
-.card-details > button:hover {
+.button:hover {
     color: blue;
     box-shadow:2px 1px 10px white;
 }
