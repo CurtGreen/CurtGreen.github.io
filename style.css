@@ -118,6 +118,6 @@ p {
 }
 
 .services {
-    grid-column: 3/6;
+    grid-column: 3/5;
     grid-row: 8;
 }
