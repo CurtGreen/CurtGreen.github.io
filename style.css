@@ -13,13 +13,11 @@ canvas {
 
 h1 {
     font-size: 2.5em;
-    /* text-shadow: 2px 2px blue; */
     text-align: left;
     letter-spacing: 5px;
 }
 
 h2, h3, h4 {
-    /* text-shadow: 2px 2px blue; */
     text-align: center;
     letter-spacing: 4px;
 }
@@ -70,9 +68,6 @@ svg {
 }
 
 .card {
-    /* background: rgb(39,17,149);
-    background: linear-gradient(45deg, rgba(39,17,149,0.8743455497382199) 0%, rgba(126,60,155,0.918848167539267) 0%, rgba(80,9,121,1) 100%, rgba(227,170,230,0.887434554973822) 100%);
-    box-shadow: 6px 6px 20px 5px rgba(51,60,255,0.64); */
     border-radius: 5px;
     padding:1.5em;
     margin-right: 2em;
