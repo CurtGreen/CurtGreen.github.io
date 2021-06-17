@@ -1,3 +1,5 @@
+import 'style.css';
+
 import * as THREE from 'https://cdn.skypack.dev/three';
 
 
