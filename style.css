@@ -1,3 +1,8 @@
+body {
+    background-color: black;
+    font-family: 'Russo One', sans-serif;
+}
+
 canvas {
     position: fixed;
     top: 0;
@@ -8,14 +13,14 @@ canvas {
 
 h1 {
     font-size: 2.5em;
-    text-shadow: 2px 2px blue;
-    text-align: right;
+    /* text-shadow: 2px 2px blue; */
+    text-align: left;
     letter-spacing: 5px;
 }
 
 h2, h3, h4 {
-    text-shadow: 2px 2px blue;
-    text-align: right;
+    /* text-shadow: 2px 2px blue; */
+    text-align: center;
     letter-spacing: 4px;
 }
 
@@ -35,14 +40,39 @@ p {
     text-align: justify;
 }
 
+svg {
+    height:60px;
+    width:60px;
+}
+
+.headline {
+    min-width: 500px;
+    max-width: 500px;
+}
+
 .socials {
-    text-align: right;
+    text-align: center;
+}
+
+.core {
+    margin:auto;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.bullet {
+    position:relative;
+    display:flex;
+    flex-direction: left;
+    right: 70px;
+    top: 110px;
+    margin-left: 0px;
 }
 
 .card {
-    background: rgb(39,17,149);
-    background: linear-gradient(40deg, rgba(39,17,149,0.8743455497382199) 0%, rgba(126,60,155,0.918848167539267) 0%, rgba(80,9,121,1) 100%, rgba(227,170,230,0.887434554973822) 100%);
-    box-shadow: 6px 6px 20px 5px rgba(51,60,255,0.64);
+    /* background: rgb(39,17,149);
+    background: linear-gradient(45deg, rgba(39,17,149,0.8743455497382199) 0%, rgba(126,60,155,0.918848167539267) 0%, rgba(80,9,121,1) 100%, rgba(227,170,230,0.887434554973822) 100%);
+    box-shadow: 6px 6px 20px 5px rgba(51,60,255,0.64); */
     border-radius: 5px;
     padding:1.5em;
     margin-right: 2em;
@@ -53,7 +83,7 @@ p {
 
 .card-details {
     background: rgb(32,31,32);
-    background: linear-gradient(3deg, rgba(32,31,32,0.8350785340314136) 0%, rgba(5,5,5,0.93717277486911) 100%);
+background:  linear-gradient(209.91deg, rgba(130, 25, 25, 0.81) 34.6%, rgba(35, 32, 32, 0.65) 58.49%, #100F0F 98.73%);
     border-radius: 10px;
     min-height: 95%;
     min-width: 400px;
@@ -68,7 +98,7 @@ p {
     z-index: 5;
     display:grid;
     color: #ffffff;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 0.5fr);
     grid-auto-rows: minmax(150px, 200px);
     gap: 2em;
 
@@ -80,11 +110,11 @@ p {
 }
 
 .button {
-    margin: 60px 0px 0px 160px;
+    margin: 60px 0px 0px 60px;
     display:block;
     padding: 10px 0px 10px 0px;
     text-align: center;
-    background-color: cadetblue;
+    background-color: #100F57;
     color: white;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -95,15 +125,20 @@ p {
 }
 
 .button:hover {
-    color: blue;
     box-shadow:2px 1px 10px white;
 }
 
 .bordered {
     margin-top:2px;
     padding-left:20%;
+    color: #d4d4ff;
     border-top: 1px dotted grey;
     border-bottom: 2px solid grey;
+}
+
+.bordered > p {
+    text-shadow: 2px 2px 2px #a655ff;
+    margin-bottom:40px;
 }
 
 .header {
@@ -114,7 +149,7 @@ p {
 
 .skills {
     grid-column: 3/5;
-    grid-row: 5;
+    grid-row: 6;
 }
 
 .services {

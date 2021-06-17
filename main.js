@@ -1,3 +1,5 @@
+import './style.css';
+
 import * as THREE from 'https://cdn.skypack.dev/three';
 
 
@@ -22,7 +24,7 @@ moveCamera();
 
 
 //Create a Torus from geometry and a material
-const geometry = new THREE.TorusGeometry(8, 0.4, 16, 80);
+const geometry = new THREE.TorusBufferGeometry(8, 0.4, 16, 80);
 const material = new THREE.MeshPhongMaterial({ color: 0x33aa47});
 const torus = new THREE.Mesh(geometry, material);
 
@@ -51,7 +53,7 @@ scene.background = spaceTexture;
 //Add Avatar Image Cube
 const curtisTexture = new THREE.TextureLoader().load('./images/curtis.jpg');
 const curtis = new THREE.Mesh(
-  new THREE.BoxGeometry(2, 2, 2),
+  new THREE.BoxBufferGeometry(2, 2, 2),
   new THREE.MeshPhongMaterial({map: curtisTexture})
 );
 curtis.position.setX(4);
@@ -64,7 +66,7 @@ const moonTexture = new THREE.TextureLoader().load('./images/moon_color_texture.
 const moonBumpTexture = new THREE.TextureLoader().load('./images/moon_bumpmap.jpg');
 
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(5, 32, 32),
+  new THREE.SphereBufferGeometry(5, 32, 32),
   new THREE.MeshPhongMaterial( {
     map: moonTexture,
     bumpMap: moonBumpTexture,
@@ -88,7 +90,8 @@ function addStar() {
   const star = new THREE.Mesh(geometry, material);
 
   //Randomly generate float values for position data
-  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(150));
+  let starField = [THREE.MathUtils.randFloatSpread(280), THREE.MathUtils.randFloatSpread(150), THREE.MathUtils.randFloatSpread(280) ];
+  const [x,y,z] = starField;
   star.position.set(x,y,z);
   scene.add(star);
 }
@@ -99,7 +102,8 @@ function addFatStar() {
   const star = new THREE.Mesh(geometry, material);
 
   //Randomly generate float values for position data
-  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(280));
+  let starField = [THREE.MathUtils.randFloatSpread(280), THREE.MathUtils.randFloatSpread(280), THREE.MathUtils.randFloatSpread(280) ];
+  const [x,y,z] = starField;
   star.position.set(x,y,z);
   scene.add(star);
 }
